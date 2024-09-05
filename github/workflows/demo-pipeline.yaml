@@ -1,0 +1,20 @@
+name: demo pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  demo:
+    name: demo jobs
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo("hello baby!") 
+
